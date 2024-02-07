@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/slick-carousel/css/slick.css">
+    <link rel="stylesheet" href="vendor/slick-carousel/css/slick-theme.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <title>Home | FX</title>
+</head>
+
+<body>
+    <!-- header -->
+    <h1 class="d-none"></h1>
+    <header class="w-100 position-absolute">
+        <div class="top-header">
+            <div class="container">
+                <div class="d-flex gap-5 align-items-center justify-content-end">
+                    <div class="search-container">
+                        <form action="#">
+                            <div class="search-wrapper">
+                                <input id="search-input" type="search" placeholder="Search">
+                                <button id="search-icon" type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="links d-flex gap-5">
+                        <a href="#">Advertise With Us</a>
+                        <a href="#">Contact Us</a>
+                        <div class="lang-button-container d-flex align-items-center pe-2">
+                            <img class="me-1" src="images/lang-icon.webp" alt="language">
+                            <a href="#" class="language-button">English</a>
+                        </div>
+                    </div>
+                    <a href="#" class="secondary-btn">Login<img src="images/header-login-icon.webp" class="ms-1"
+                            alt="icon"></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="container-fluid">
+            <div class="row">
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="index.html" class="logo">
+                            <img src="images/logo.png" alt="logo">
+                        </a>
+                        <div class="ms-auto d-lg-none search-and-icons me-2">
+                            <a href="#" id="mobile-search-icon">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            </a>
+                            <div class="d-inline" href="#">
+                                <img class="account-icon" src="images/account-icon.webp" alt="profile">
+                            </div>
+                        </div>
+                        <input type="checkbox" id="click">
+                        <label for="click" class="menu-btn d-lg-none">
+                            <span><i class="fa-solid fa-bars"></i></span>
+                        </label>
+
+                        <ul class="nav-links align-items-center">
+                            <li class="active"><a class="nav-link " href="index.html">Home</a></li>
+                            <li><a class="nav-link" href="blogs.html">Blogs</a></li>
+                            <li><a class="nav-link" href="forexs.html">Forex</a></li>
+                            <li><a class="nav-link" href="brokers.html">Brokers</a></li>
+                            <li><a class="nav-link" href="services.html">Services</a></li>
+                            <li><a class="nav-link" href="services.html">Services</a></li>
+                            <li><a class="nav-link" href="loyality-programs.html">Loyalty Programs</a></li>
+                            <li><a class="nav-link" href="faq.html">FAQ</a></li>
+                            <li><a class="nav-link" href="about-us.html">About Us</a></li>
+                            <li><a class="nav-link d-lg-none" href="about.html">Arabic</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <div class="overlay"></div>
+    </header>
+
+    <!-- mobile-search -->
+    <section class="d-lg-none">
+        <div class="container">
+            <div class="mobile-search-container">
+                <div class="mobile-search" id="mobile-search">
+                    <div class="search-container">
+                        <form action="#" class="position-relative">
+                            <input type="search" placeholder="Search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="home">
+        <!-- hero-sec-slider -->
+        <section>
+            <div class="hero-sec-slider">
+                <div class="slide-item">
+                    <div class="img-holder">
+                        <img src="images/hero-slider-img1.png" alt="FX">
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <div class="img-holder">
+                        <img src="images/hero-slider-img1.png" alt="FX">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="vendor/slick-carousel/js/slick.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.hero-sec-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                autoplay: false,
+                dots: false,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 768, // Mobile breakpoint
+                        settings: {
+                            slidesToShow: 1,  // Display 1 slide on mobile
+                            infinite: false,  // Disable infinite loop on mobile
+                        }
+                    }
+                ]
+            });
+
+            $(window).on("scroll", function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 55) {
+                    $("header nav").addClass("nav-color");
+                    $("header nav").removeClass("transparent-nav");
+                } else {
+                    // $("header nav").css("background-color", "transparent");
+                    $("header nav").removeClass("nav-color");
+                    $("header nav").addClass("transparent-nav");
+                }
+                var scroll = $(window).scrollTop();
+            });
+
+            $('#search-icon').click(function () {
+                var $input = $('#search-input');
+                if ($input.parent().hasClass('expanded')) {
+                    $input.parent().removeClass('expanded').css('width', '0');
+                } else {
+                    $input.parent().addClass('expanded').css('width', '200px'); // Adjust width as needed
+                    $input.focus();
+                }
+            });
+
+            $('#mobile-search-icon').click(function () {
+                // Slide the target div
+                $('#mobile-search').slideToggle();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
