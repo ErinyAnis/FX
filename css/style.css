@@ -382,6 +382,9 @@ header nav .menu-btn img {
 }
 
 @media (max-width: 992px) {
+  header nav .logo img {
+    height: 50px;
+  }
   header .top-header {
     display: none;
   }
