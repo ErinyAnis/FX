@@ -925,3 +925,23 @@ header nav .menu-btn img {
       font-weight: 500;
     }
 }
+/* end-video */
+/* ------------------------------- */
+/* brokers */
+.home .brokers h5 {
+  color: var(--main-color);
+  font-size: 44px;
+}
+.home .brokers p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .home .brokers h5 {
+    font-size: 32px;
+  }
+    .home .brokers p{
+      font-size: 16px;
+    }
+}
