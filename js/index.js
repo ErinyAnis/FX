@@ -16,10 +16,10 @@ $(document).ready(function () {
   });
   $("#click").change(function () {
     if ($(this).is(":checked")) {
-      $("nav ul").css("left", "0");
+      $("nav ul").css("bottom", "0");
     } else {
       // If you want to reset the style when unchecked
-      $("nav ul").css("left", "-100%"); // Reset to default value or any other value you want
+      $("nav ul").css("bottom", "-100%"); // Reset to default value or any other value you want
     }
   });
 
