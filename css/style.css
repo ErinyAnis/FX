@@ -818,10 +818,12 @@ header nav .menu-btn img {
 .home .download-app {
   background-color: var(--basic);
   position: relative;
+  overflow: hidden;
 }
 
 .home .download-app .img-container img {
-  height: 480px;
+  height: 460px;
+  margin-bottom: -20px;
 }
 
 .home .download-app .img-container {
@@ -866,9 +868,6 @@ header nav .menu-btn img {
 }
 
 @media (max-width: 992px) {
-  .home .download-app {
-    overflow: hidden;
-  }
   .home .download-app .img-container {
     position: static;
     text-align: center;
