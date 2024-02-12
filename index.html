@@ -19,25 +19,32 @@
     <header class="w-100 position-absolute">
         <div class="top-header">
             <div class="container">
-                <div class="d-flex gap-5 align-items-center justify-content-end">
-                    <div class="search-container">
-                        <form action="#">
-                            <div class="search-wrapper">
-                                <input id="search-input" type="search" placeholder="Search">
-                                <button id="search-icon" type="submit"><i class="fa fa-search"></i></button>
-                            </div>
-                        </form>
+                <div class="d-flex gap-5 align-items-center">
+                    <div class="d-flex align-items-center gap-2 social-links">
+                        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <div class="links d-flex gap-5">
-                        <a href="#">Advertise With Us</a>
-                        <a href="#">Contact Us</a>
-                        <div class="lang-button-container d-flex align-items-center pe-2">
-                            <img class="me-1" src="images/lang-icon.webp" alt="language">
-                            <a href="#" class="language-button">English</a>
+                    <div class="d-flex align-items-center justify-content-end ms-auto">
+                        <div class="search-container">
+                            <form action="#">
+                                <div class="search-wrapper">
+                                    <input id="search-input" type="search" placeholder="Search">
+                                    <button id="search-icon" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
                         </div>
+                        <div class="links d-flex gap-5 me-5">
+                            <a href="#">Advertise With Us</a>
+                            <a href="#">Contact Us</a>
+                            <div class="lang-button-container d-flex align-items-center">
+                                <img class="me-1" src="images/lang-icon.webp" alt="language">
+                                <a href="#" class="language-button">English</a>
+                            </div>
+                        </div>
+                        <a href="#" class="top-header-btn">Login<img src="images/header-login-icon.webp" class="ms-1"
+                                alt="icon"></a>
                     </div>
-                    <a href="#" class="secondary-btn">Login<img src="images/header-login-icon.webp" class="ms-1"
-                            alt="icon"></a>
                 </div>
             </div>
         </div>
@@ -154,6 +161,83 @@
             </div>
         </section>
 
+        <section>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <!--<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Quotes</span></a> by TradingView</div>-->
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols": [
+                                {
+                                    "proName": "FOREXCOM:SPXUSD",
+                                    "title": "S&P 500"
+                                },
+                                {
+                                    "proName": "FOREXCOM:NSXUSD",
+                                    "title": "US 100"
+                                },
+                                {
+                                    "proName": "FX_IDC:EURUSD",
+                                    "title": "EUR/USD"
+                                },
+                                {
+                                    "proName": "BITSTAMP:BTCUSD",
+                                    "title": "Bitcoin"
+                                },
+                                {
+                                    "proName": "BITSTAMP:ETHUSD",
+                                    "title": "Ethereum"
+                                }
+                            ],
+                                "colorTheme": "light",
+                                    "isTransparent": false,
+                                        "showSymbolLogo": true,
+                                            "locale": "en"
+                        }
+                    </script>
+            </div>
+            <!-- TradingView Widget END -->
+
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <!--<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>-->
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                        {
+                            "symbols": [
+                                {
+                                    "proName": "FOREXCOM:SPXUSD",
+                                    "title": "S&P 500"
+                                },
+                                {
+                                    "proName": "FOREXCOM:NSXUSD",
+                                    "title": "US 100"
+                                },
+                                {
+                                    "proName": "FX_IDC:EURUSD",
+                                    "title": "EUR/USD"
+                                },
+                                {
+                                    "proName": "BITSTAMP:BTCUSD",
+                                    "title": "Bitcoin"
+                                },
+                                {
+                                    "proName": "BITSTAMP:ETHUSD",
+                                    "title": "Ethereum"
+                                }
+                            ],
+                                "showSymbolLogo": true,
+                                    "colorTheme": "light",
+                                        "isTransparent": false,
+                                            "displayMode": "adaptive",
+                                                "locale": "en"
+                        }
+                    </script>
+            </div>
+        </section>
+
         <!-- banners -->
         <section class="banners sec-padding">
             <div class="container">
@@ -216,7 +300,8 @@
                         <div class="col-lg-7 order-1 order-lg-2 white-color mtlg-5">
                             <h4 class="fw-700">Trade on the go, straight from your phone</h4>
                             <p>Never miss another trading opportunity again. <br>
-                                Get the FX Commission app for commission free trading and spreads as low as zero on major FX
+                                Get the FX Commission app for commission free trading and spreads as low as zero on
+                                major FX
                                 pairs and gold. <br>
                                 Everything you need. One app.</p>
                             <div class="d-flex gap-4">
@@ -250,7 +335,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h4 class="fw-700 text-center"><span>Forex education course</span> from beginning to the professionalize by FXCommission Contact us to find out how to get it.</h4>
+                        <h4 class="fw-700 text-center"><span>Forex education course</span> from beginning to the
+                            professionalize by FXCommission Contact us to find out how to get it.</h4>
                         <video controls>
                             <source src="images/trading-vido.mp4">
                             Your browser does not support the video tag.
@@ -266,9 +352,527 @@
         <!-- brokers -->
         <section class="brokers sec-padding">
             <div class="container">
-                <h5 class="fw-700">Trading & brokers</h5>
-                <p>Trade directly on the supercharts through our supported, fully - verified and user - reviewed brokers.</p>
+                <div class="main-title">
+                    <h5 class="fw-700">Trading & brokers</h5>
+                    <p>Trade directly on the supercharts through our supported, fully - verified and user - reviewed
+                        brokers.</p>
+                </div>
                 <!-- nav -->
+                <ul class="nav nav-pills mb-3 justify-content-center mt-4" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-best-brokers-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-best-brokers" type="button" role="tab"
+                            aria-controls="pills-best-brokers" aria-selected="true">Best Brokers</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-Brokers-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-Brokers" type="button" role="tab" aria-controls="pills-Brokers"
+                            aria-selected="false">Brokers</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-best-brokers" role="tabpanel"
+                        aria-labelledby="pills-best-brokers-tab" tabindex="0">
+                        <div class="brokers-card-container">
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-Brokers" role="tabpanel" aria-labelledby="pills-Brokers-tab"
+                        tabindex="0">
+                        <div class="brokers-card-container">
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="broker-card text-center">
+                                    <figure>
+                                        <a href="#"><img class="m-auto" src="images/broker-card.png" alt="img"></a>
+                                    </figure>
+                                    <a href="#">
+                                        <h6 class="fw-700">HF Markets</h6>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <div class="commission-title">Commission:</div>
+                                        <div class="commission-percentage main-color">40%</div>
+                                    </div>
+                                    <div class="mt-4 links">
+                                        <div>
+                                            <a href="#" class="main-btn">Open account<i
+                                                    class="fa-regular fa-pen-to-square ms-2"></i></a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="#" class="secondary-btn">Learn more</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all text-center mt-3">
+                    <a href="#">View all brokers <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- banners -->
+        <section class="sec-padding">
+            <div class="container">
+                <div class="row gy-3">
+                    <div class="col-lg-6">
+                        <img src="images/banner-3.png" alt="banner">
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="images/banner-4.png" alt="banner">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Withdrawal -->
+        <section class="withdrawal-sec sec-padding">
+            <div class="container sec-inner-padding">
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Country</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Withdrawal</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><img src="images/egypt-flag.png" alt="egypt"></th>
+                                <td class="person-name">Ahmed Mohamed</td>
+                                <td class="amount">150$</td>
+                                <td class="date">30-1-2024</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><img src="images/france-flag.png" alt="france"></th>
+                                <td class="person-name">Jacob</td>
+                                <td class="amount">50$</td>
+                                <td class="date">30-1-2024</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><img src="images/egypt-flag.png" alt="egypt"></th>
+                                <td class="person-name">Tarek Ahmed</td>
+                                <td class="amount">10$</td>
+                                <td class="date">30-1-2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- clients-reviews -->
+        <section class="clients-reviews sec-padding">
+            <div class="container">
+                <div class="main-title">
+                    <h5 class="fw-700 main-color mb-3">Clients Reviews About Our Services</h5>
+                </div>
+                <div class="reviews-container">
+                    <div class="p-3">
+                        <div class="review text-center">
+                            <h4>Nick Weimann</h4>
+                            <div class="review-title">District Directives Representative</div>
+                            <div class="mt-4 mb-4">
+                                <div class="total-reviews">
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw"></span>
+                                    <span class="fa fa-star fa-fw"></span>
+                                </div>
+                            </div>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit
+                                mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <div class="review text-center">
+                            <h4>Nick Weimann</h4>
+                            <div class="review-title">District Directives Representative</div>
+                            <div class="mt-4 mb-4">
+                                <div class="total-reviews">
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw"></span>
+                                    <span class="fa fa-star fa-fw"></span>
+                                </div>
+                            </div>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit
+                                mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <div class="review text-center">
+                            <h4>Nick Weimann</h4>
+                            <div class="review-title">District Directives Representative</div>
+                            <div class="mt-4 mb-4">
+                                <div class="total-reviews">
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw"></span>
+                                    <span class="fa fa-star fa-fw"></span>
+                                </div>
+                            </div>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit
+                                mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <div class="review text-center">
+                            <h4>Nick Weimann</h4>
+                            <div class="review-title">District Directives Representative</div>
+                            <div class="mt-4 mb-4">
+                                <div class="total-reviews">
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw checked"></span>
+                                    <span class="fa fa-star fa-fw"></span>
+                                    <span class="fa fa-star fa-fw"></span>
+                                </div>
+                            </div>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit
+                                mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- banners -->
+        <section class="sec-padding">
+            <div class="container">
+                <img src="images/banner-5.png" alt="banner">
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- blogs -->
+        <section class="blogs sec-padding">
+            <div class="container">
+                <div class="main-title">
+                    <h5 class="fw-700">Blogs</h5>
+                    <p>Trade directly on the supercharts through our supported, fully - verified and user - reviewed brokers.</p>
+                </div>
+                <!-- nav -->
+                <ul class="nav nav-pills mb-3 justify-content-center mt-4" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-latest-news-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-latest-news" type="button" role="tab" aria-controls="pills-latest-news"
+                            aria-selected="true">Last News</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-forex-news-tab" data-bs-toggle="pill" data-bs-target="#pills-forex-news"
+                            type="button" role="tab" aria-controls="pills-forex-news" aria-selected="false">Forex News</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-commission-news-tab" data-bs-toggle="pill" data-bs-target="#pills-commission-news"
+                            type="button" role="tab" aria-controls="pills-commission-news" aria-selected="false">FX Commission News</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-broker-news-tab" data-bs-toggle="pill" data-bs-target="#pills-broker-news"
+                            type="button" role="tab" aria-controls="pills-broker-news" aria-selected="false">Broker News</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-latest-news" role="tabpanel"
+                        aria-labelledby="pills-latest-news-tab" tabindex="0">
+                        <div>latest-news</div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-forex-news" role="tabpanel" aria-labelledby="pills-forex-news-tab" tabindex="0">
+                       <div>forex-news</div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-commission-news" role="tabpanel" aria-labelledby="pills-commission-news-tab" tabindex="0">
+                        <div>commission-news</div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-broker-news" role="tabpanel" aria-labelledby="pills-broker-news-tab" tabindex="0">
+                        <div>broker-news</div>
+                    </div>
+                </div>
+                <div class="view-all text-center mt-3">
+                    <a href="#">View all brokers <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
             </div>
         </section>
     </main>
@@ -288,6 +892,69 @@
                 autoplay: true,
                 dots: true,
                 arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            arrows: false,
+                        }
+                    },
+                ]
+            });
+            $('.brokers-card-container').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: false,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1201,
+                        settings: {
+                            slidesToShow: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 1.5,
+
+                        }
+                    },
+                ]
+            });
+            $('.reviews-container').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: false,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 2,
+                            dots: true,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 1,
+                            dots: true,
+                        }
+                    },
+                ]
             });
 
             $(window).on("scroll", function () {

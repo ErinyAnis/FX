@@ -7,15 +7,19 @@
   --gray-light: #a2a2a2;
   --gray-light-2: #c4c4c4;
   --gray-light-3: #ececec;
+  --gray-1: #646363;
   --gray-2: #808080;
+  --gray-3: #a2a2a2;
   --gray-4: #ececec;
   --gray-middle: #808080;
   --gray-high: #646363;
   --gray-900: #18181b;
   --main-color: #0095d0;
-  --main-button-hover: #b0181e;
+  --main-button-hover: #0379a8;
+  --secondary-btn-hover: #0379a8;
   --white: #ffffff;
   --green: #2d9631;
+  --error: #f33f32;
 }
 
 * {
@@ -28,8 +32,7 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   color: var(--basic);
-  background-color: #ECECEC;
-  height: 5000px;
+  background-color: #ececec;
 }
 
 @media (min-width: 992px) {
@@ -95,18 +98,16 @@ a:hover {
 }
 
 .secondary-btn {
-  border: 1px solid var(--white);
-  color: var(--main-color);
-  font-size: 18px;
-  transition: var(--transition);
-  padding: 4px 20px;
+  padding: 7px 20px;
   border-radius: 5px;
-  background-color: var(--white);
+  transition: var(--transition);
+  color: var(--main-color);
+  border: 1px solid;
+  font-size: 18px;
 }
 
 .secondary-btn:hover {
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
+  color: var(--secondary-btn-hover);
 }
 
 .top-sec-m {
@@ -145,7 +146,9 @@ a:hover {
 .white-color {
   color: var(--white);
 }
-
+.error-color {
+  color: var(--error);
+}
 /* end-colors */
 
 /* font-weight */
@@ -180,7 +183,6 @@ a:hover {
 }
 
 @media (max-width: 767px) {
-
   .main-btn,
   .secondary-btn {
     font-size: 14px;
@@ -284,8 +286,29 @@ header .top-header .lang-button-container img {
   height: 20px;
 }
 
-header .top-header .secondary-btn img {
+header .top-header .top-header-btn img {
   height: 18px;
+}
+
+header .top-header .top-header-btn {
+  border: 1px solid var(--white);
+  color: var(--main-color);
+  font-size: 18px;
+  transition: var(--transition);
+  padding: 4px 20px;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+header .top-header .top-header-btn:hover {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+header .top-header .social-links i {
+  color: #fefefe99;
+  font-size: 20px;
+}
+header .top-header .social-links i:hover {
+  color: var(--white);
 }
 
 /* end-top-header */
@@ -428,7 +451,7 @@ header nav .menu-btn img {
     background-color: var(--white);
   }
 
-  #click:checked~ul {
+  #click:checked ~ ul {
     bottom: 0;
   }
 
@@ -460,7 +483,7 @@ header nav .menu-btn img {
     color: var(--white) !important;
   }
 
-  #click:checked~ul li .nav-link {
+  #click:checked ~ ul li .nav-link {
     margin-left: 0px;
   }
 
@@ -529,6 +552,29 @@ header nav .menu-btn img {
 
 /* ------------------------------------------ */
 /* start home */
+
+/* main-title */
+.home .main-title h5 {
+  color: var(--main-color);
+  font-size: 44px;
+}
+
+.home .main-title p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .home .main-title h5 {
+    font-size: 32px;
+  }
+  .home .main-title p {
+    font-size: 16px;
+  }
+}
+/* end-main-title */
+
+/* hero-slider */
 .home .hero-sec-slider .slick-next,
 .home .hero-sec-slider .slick-prev {
   z-index: 2;
@@ -573,11 +619,11 @@ header nav .menu-btn img {
   opacity: 1;
 }
 
-.home .slick-dots {
+.home .hero-sec-slider .slick-dots {
   bottom: 25px;
 }
 
-.home .slick-dots li button:before {
+.home .hero-sec-slider .slick-dots li button:before {
   color: var(--gray-4);
 }
 
@@ -698,6 +744,8 @@ header nav .menu-btn img {
   }
 }
 
+/* end-how-it-works */
+/* -------------------------------------- */
 .home .how-to-register h3 {
   font-size: 66px;
 }
@@ -736,21 +784,20 @@ header nav .menu-btn img {
   content: "";
   width: 116%;
   height: 38%;
-  background: #ECECEC;
+  background: #ececec;
   position: absolute;
   bottom: -23%;
   left: -8%;
   border-radius: 50% 50% 0 0;
   z-index: 0;
   box-shadow: 1px -3px 4px #bbbbbbd1;
-
 }
 
 .home .how-to-register .cards-container .card:after {
   content: "";
   width: 116%;
   height: 38%;
-  background: #ECECEC;
+  background: #ececec;
   box-shadow: 0px 3px 4px #bbbbbbd1;
   position: absolute;
   top: -25%;
@@ -803,12 +850,17 @@ header nav .menu-btn img {
 
   .home .how-to-register .cards-container .card p {
     margin-bottom: 25%;
+    font-size: 14px;
+  }
+  .home .how-to-register .cards-container .card h4 {
+    font-size: 18px;
   }
 }
 
 @media (max-width: 767px) {
   .home .how-to-register .cards-container .card {
-    width: 100%;
+    width: 80%;
+    margin: auto;
   }
 }
 
@@ -896,7 +948,7 @@ header nav .menu-btn img {
   }
   .home .download-app a h5 {
     font-size: 14px;
-}
+  }
 }
 
 /* video-sec */
@@ -922,28 +974,248 @@ header nav .menu-btn img {
     font-size: 32px;
     font-weight: 700;
   }
-    .video-sec h4 {
-      font-size: 16px;
-      font-weight: 500;
-    }
+  .video-sec h4 {
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 /* end-video */
 /* ------------------------------- */
 /* brokers */
-.home .brokers h5 {
+
+/* nav */
+.home .nav-pills .nav-link {
   color: var(--main-color);
-  font-size: 44px;
-}
-.home .brokers p {
+  margin: 10px;
+  transition: all var(--transition);
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
   font-weight: 500;
-  font-size: 18px;
+}
+.home .nav-pills .nav-link.active,
+.home .nav-pills .nav-link:hover,
+.home .nav-pills .show > .nav-link {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--main-color);
+  border-radius: 0;
+  color: var(--basic);
+}
+
+.home .brokers .brokers-card-container .broker-card {
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.home .brokers .brokers-card-container .broker-card h6 {
+  font-size: 30px;
+  margin-bottom: 0;
+  transition: var(--transition);
+}
+.home .brokers .brokers-card-container .broker-card h6:hover {
+  color: var(--main-color);
+}
+
+.home .brokers .brokers-card-container .broker-card .commission-title,
+.home .brokers .brokers-card-container .broker-card .commission-percentage {
+  font-size: 22px;
+}
+
+.home .brokers .brokers-card-container .broker-card .commission-title {
+  color: var(--gray-1);
+}
+
+.home .brokers .brokers-card-container .broker-card .links a {
+  width: 100%;
+  display: block;
+}
+
+.home .slick-next:before {
+  content: "\f35a";
+}
+.home .slick-prev:before {
+  content: "\f359";
+}
+.home .brokers .slick-next {
+  right: 1%;
+}
+.home .brokers .slick-prev {
+  left: -1px;
+  z-index: 1;
+}
+.home .slick-prev.slick-disabled:before,
+.home .slick-next.slick-disabled:before {
+  opacity: 0.6;
+}
+
+.home .slick-next:before,
+.home .slick-prev:before {
+  font-family: "Font Awesome 5 Free";
+  color: var(--gray-light-2);
+  font-size: 36px;
+  transition: var(--transition);
+}
+.home .slick-next:hover:before,
+.home .slick-prev:hover:before {
+  color: var(--main-color) !important;
+}
+
+.home .brokers .view-all a {
+  font-size: 20px;
+  font-weight: 500;
+}
+.home .brokers .view-all a:hover {
+  color: var(--main-color);
+}
+.home .brokers .view-all a i {
+  transition: unset;
 }
 
 @media (max-width: 992px) {
-  .home .brokers h5 {
-    font-size: 32px;
+  .home .brokers .brokers-card-container .broker-card h6 {
+    font-size: 18px;
   }
-    .home .brokers p{
-      font-size: 16px;
-    }
+  .home .brokers .brokers-card-container .broker-card .commission-title {
+    font-size: 16px;
+  }
+  .home .brokers .brokers-card-container .broker-card .commission-percentage {
+    font-size: 14px;
+  }
+  .home .brokers .brokers-card-container .broker-card img {
+    max-height: 150px;
+  }
+  .home .brokers .view-all a {
+    font-size: 16px;
+  }
 }
+
+/* withdrawal-sec */
+.home .withdrawal-sec {
+  background-image: url("../images/withdrawal-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.home .withdrawal-sec .table-container {
+  background: rgb(255 255 255 / 7%);
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 0 2px rgb(255 255 255 / 42%);
+  overflow: hidden;
+  padding: 3% 8% 1%;
+}
+/* table */
+.home .withdrawal-sec .table-container table thead th {
+  font-weight: 700;
+  font-size: 20px;
+}
+.home .withdrawal-sec .table-container .table > :not(caption) > * > * {
+  background-color: transparent;
+  color: var(--white);
+}
+
+.home .withdrawal-sec .table-container table tbody tr:last-child {
+  border-bottom: transparent;
+}
+
+.home .withdrawal-sec .table-container table td,
+.home .withdrawal-sec .table-container table th {
+  vertical-align: middle;
+}
+.home .withdrawal-sec .table-container table .person-name {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.home .withdrawal-sec .table-container table .amount,
+.home .withdrawal-sec .table-container table .date {
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .home .withdrawal-sec .table-container table thead th {
+    font-size: 16px;
+  }
+  .home .withdrawal-sec .table-container table img {
+    max-height: 40px;
+  }
+  .home .withdrawal-sec .table-container table .person-name {
+    font-size: 14px;
+  }
+  .home .withdrawal-sec .table-container table .amount,
+  .home .withdrawal-sec .table-container table .date {
+    font-size: 14px;
+  }
+}
+/* end withdrawal-sec */
+/* ---------------------------------------------- */
+/* start clients-reviews */
+.home .clients-reviews h3 {
+  font-size: 42px;
+}
+
+.home .clients-reviews .reviews-container .review {
+  padding: 30px 20px;
+  background-color: var(--white);
+  border-radius: 25px;
+}
+
+.home .clients-reviews .reviews-container .review h4 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.home .clients-reviews .reviews-container .review .review-title {
+  color: var(--gray-1);
+}
+.home .clients-reviews .reviews-container .review .total-reviews span {
+  color: var(--gray-3);
+}
+.home .clients-reviews .reviews-container .review .total-reviews span.checked {
+  color: var(--main-color);
+}
+
+.home .clients-reviews .reviews-container .review p {
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+.home .clients-reviews .slick-prev {
+  left: -33px;
+  z-index: 1;
+}
+
+.home .clients-reviews .slick-next {
+  right: -20px;
+}
+
+.home .clients-reviews .slick-dots li button:hover:before {
+  color: var(--main-color);
+}
+
+@media (max-width: 992px) {
+  .home .clients-reviews h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .home .clients-reviews .reviews-container .review h4 {
+    font-size: 20px;
+  }
+  .home .clients-reviews .reviews-container .review .review-title {
+    font-size: 14px;
+  }
+  .home .clients-reviews .reviews-container .review p {
+    font-size: 16px;
+  }
+}
+/* end-reviews */
+/* ------------------------------------------ */
+
+/* blogs */
