@@ -640,7 +640,8 @@ header nav .dropdown-menu li:not(:last-child) {
   .main-title p {
     font-size: 16px;
   }
-  .head-title h2  {
+
+  .head-title h2 {
     font-size: 32px;
   }
 }
@@ -1383,6 +1384,7 @@ header nav .dropdown-menu li:not(:last-child) {
   .home .clients-reviews .reviews-container .review {
     margin-bottom: 10px;
   }
+
   .home .clients-reviews h3 {
     font-size: 32px;
     text-align: center;
@@ -1763,21 +1765,28 @@ footer .copy-rights a:hover {
   .blogs .all-blog-posts .links ul li a {
     font-size: 16px;
   }
+
   .blogs .blogs-card-container .right-side .blog-card .card-body {
     border-radius: 0 0 18px 18px;
   }
+
   .blogs .blogs-card-container .right-side .blog-card .date {
     font-size: 14px;
   }
+
   .blogs .blogs-card-container .right-side .blog-card .card-title {
     font-size: 18px;
   }
-  .blogs .blogs-card-container .right-side .blog-card .card-text, .blogs .blogs-card-container .right-side .blog-card .read-more {
+
+  .blogs .blogs-card-container .right-side .blog-card .card-text,
+  .blogs .blogs-card-container .right-side .blog-card .read-more {
     font-size: 16px;
   }
+
   .blogs .blogs-card-container .right-side .blog-card .read-more i {
     font-size: 14px;
   }
+
   .blogs .blogs-card-container .right-side .blog-card .img-container {
     border-radius: 18px 18px 0 0;
   }
@@ -1887,19 +1896,23 @@ footer .copy-rights a:hover {
   font-weight: 600;
   font-size: 28px;
 }
+
 @media (max-width: 992px) {
   .loyalty-programs .loyalty-content h3 {
     font-size: 20px;
   }
+
   .loyalty-programs .loyalty-content p {
     font-size: 16px;
   }
+
   .loyalty-programs .bottom-text {
     color: var(--basic);
     font-weight: 700;
     font-size: 20px;
   }
 }
+
 /* end loyalty-programs */
 /* -------------------------------------- */
 
@@ -1909,14 +1922,17 @@ footer .copy-rights a:hover {
   font-size: 24px;
   margin-bottom: 5px;
 }
+
 @media (max-width: 992px) {
   .services .services-cards .blogs-card-container .blog-card h5 {
     font-size: 24px;
   }
+
   .services .services-cards .blogs-card-container .blog-card .card-text {
     font-size: 14px;
   }
 }
+
 /* end services-page */
 /* --------------------------------------------*/
 
@@ -1928,17 +1944,21 @@ footer .copy-rights a:hover {
 .service-details .content h2 {
   font-size: 32px;
 }
+
 .service-details .content p {
   font-size: 18px;
 }
+
 @media (max-width: 992px) {
   .service-details .content h2 {
     font-size: 18px;
   }
+
   .service-details .content p {
     font-size: 16px;
   }
 }
+
 /* end-service-details */
 /* ------------------------------------------ */
 
@@ -1949,6 +1969,7 @@ footer .copy-rights a:hover {
   margin-bottom: 3px;
   transition: var(--transition);
 }
+
 .brokers-page .broker-card .broker-card-title h3:hover {
   color: var(--main-color);
 }
@@ -1979,9 +2000,11 @@ footer .copy-rights a:hover {
 .brokers-page .pagination li:nth-child(2) {
   margin-left: auto;
 }
+
 .brokers-page .pagination li:last-child {
   margin-left: auto;
 }
+
 .brokers-page .pagination .page-item .page-link {
   border: none;
   background-color: transparent;
@@ -2003,12 +2026,14 @@ footer .copy-rights a:hover {
   transition: unset;
 }
 
-.brokers-page .pagination .page-item.active .page-link, .brokers-page .pagination li:not(:last-child) .page-link:hover {
+.brokers-page .pagination .page-item.active .page-link,
+.brokers-page .pagination li:not(:last-child) .page-link:hover {
   background-color: var(--white);
   border-radius: 8px;
 }
 
-.brokers-page .pagination li:last-child:hover .page-link, .brokers-page .pagination li:first-child:hover .page-link {
+.brokers-page .pagination li:last-child:hover .page-link,
+.brokers-page .pagination li:first-child:hover .page-link {
   color: var(--main-color);
 }
 
@@ -2017,6 +2042,7 @@ footer .copy-rights a:hover {
     font-size: 14px;
   }
 }
+
 /* end-brokers-page  */
 /* -------------------------------------- */
 
@@ -2024,6 +2050,7 @@ footer .copy-rights a:hover {
 .broker-details .description h4 {
   font-size: 42px;
 }
+
 @media (max-width: 992px) {
   .broker-details .description h4 {
     font-size: 18px;
