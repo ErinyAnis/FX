@@ -15,7 +15,6 @@
 
 <body>
     <!-- header -->
-    <h1 class="d-none"></h1>
     <header class="w-100 position-absolute">
         <div class="top-header">
             <div class="container">
@@ -83,7 +82,7 @@
                         </li>
                         <li><a class="nav-link" href="brokers.html">Brokers</a></li>
                         <li><a class="nav-link" href="services.html">Services</a></li>
-                        <li><a class="nav-link" href="loyality-programs.html">Loyalty Programs</a></li>
+                        <li><a class="nav-link" href="loyalty-programs.html">Loyalty Programs</a></li>
                         <li><a class="nav-link" href="faq.html">FAQ</a></li>
                         <li><a class="nav-link" href="about-us.html">About Us</a></li>
                         <li><a class="nav-link d-lg-none" href="about.html">Arabic</a></li>
@@ -158,13 +157,123 @@
                         condimentum pellentesque vulputate. Eu pulvinar mi fringilla dis et eget risus quis purus.</p>
                     <hr>
                 </div>
+                <!-- all blogs -->
+                <div class="blogs mt-5">
+                    <div class="container">
+                        <div class="main-title">
+                            <h5 class="fw-700 mb-3">All blog posts</h5>
+                        </div>
+                        <div class="row gy-5 blogs-card-container">
+                            <div class="col-lg-4">
+                                <a href="blog-details.html">
+                                    <div class="blog-card">
+                                        <div class="img-container">
+                                            <img src="images/blogs-card-img.png" class="card-img-top" alt="blog-title">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="date mb-2">Natali Craig • 14 Jan 2022</div>
+                                            <h5 class="card-title">USA lifts sanctions against Xiaomi</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up the bulk of the card's
+                                                content.</p>
+                                            <div class="main-color read-more fw-500">Read Article<i
+                                                    class="fa-solid fa-chevron-right"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="blog-details.html">
+                                    <div class="blog-card">
+                                        <div class="img-container">
+                                            <img src="images/blogs-card-img.png" class="card-img-top" alt="blog-title">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="date mb-2">Natali Craig • 14 Jan 2022</div>
+                                            <h5 class="card-title">USA lifts sanctions against Xiaomi</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up the bulk of the card's
+                                                content.</p>
+                                            <div class="main-color read-more fw-500">Read Article<i
+                                                    class="fa-solid fa-chevron-right"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="blog-details.html">
+                                    <div class="blog-card">
+                                        <div class="img-container">
+                                            <img src="images/blogs-card-img.png" class="card-img-top" alt="blog-title">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="date mb-2">Natali Craig • 14 Jan 2022</div>
+                                            <h5 class="card-title">USA lifts sanctions against Xiaomi</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up the bulk of the card's
+                                                content.</p>
+                                            <div class="main-color read-more fw-500">Read Article<i
+                                                    class="fa-solid fa-chevron-right"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            <button class="secondary-btn ps-5 pe-5">Load more</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- all blogs -->
-        <section class="sec-padding">
-            <div class="container">
-
+        <!-- contact-us -->
+        <section class="contact-us-sec sec-padding mb-0">
+            <div class="sec-inner-padding">
+                <div class="container">
+                    <div class="title">
+                        <div>
+                            <h3 class="fw-700">Contact Us</h3>
+                            <p>If you got any questions ... <br>
+                                Please don’t hesitate to send us a message</p>
+                        </div>
+                    </div>
+                    <div class="form-container">
+                        <form action="#" id="contact-form">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name*</label>
+                                <input type="text" name="name" class="form-control" id="fullName"
+                                    placeholder="Enter your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email*</label>
+                                <input type="email" name="email" class="form-control" id="email"
+                                    placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Mobile Number*</label>
+                                <input type="number" name="phone" class="form-control" id="phone"
+                                    placeholder="Mobile Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject*</label>
+                                <input type="text" name="subject" class="form-control" id="subject"
+                                    placeholder="Write subject title" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message*</label>
+                                <input type="text" name="message" class="form-control" id="message"
+                                    placeholder="Enter your message" required>
+                            </div>
+                            <div class="text-center">
+                                <button class="main-btn" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -259,7 +368,7 @@
 
     <script>
         $(document).ready(function () {
-            $('nav').css('background-color', '#1D1B1BC4');
+            $('header nav').css('background-color', '#1D1B1BC4');
 
             $(window).on("scroll", function () {
                 var scroll = $(window).scrollTop();
@@ -271,6 +380,27 @@
 
                 }
                 var scroll = $(window).scrollTop();
+            });
+
+            $('#search-icon').click(function () {
+                var $input = $('#search-input');
+                if ($input.parent().hasClass('expanded')) {
+                    $input.parent().removeClass('expanded').css('width', '0');
+                } else {
+                    $input.parent().addClass('expanded').css('width', '200px'); // Adjust width as needed
+                    $input.focus();
+                }
+                var inputData = $('#search-input').val();
+                if (inputData.trim().length > 0) {
+                    $(this).attr('type', 'submit');
+                } else {
+                    $(this).attr('type', 'button');
+                }
+            });
+
+            $('#mobile-search-icon').click(function () {
+                // Slide the target div
+                $('#mobile-search').slideToggle();
             });
 
             $("#contact-form").validate({

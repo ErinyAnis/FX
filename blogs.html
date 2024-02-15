@@ -15,7 +15,6 @@
 
 <body>
     <!-- header -->
-    <h1 class="d-none"></h1>
     <header class="w-100 position-absolute">
         <div class="top-header">
             <div class="container">
@@ -83,7 +82,7 @@
                         </li>
                         <li><a class="nav-link" href="brokers.html">Brokers</a></li>
                         <li><a class="nav-link" href="services.html">Services</a></li>
-                        <li><a class="nav-link" href="loyality-programs.html">Loyalty Programs</a></li>
+                        <li><a class="nav-link" href="loyalty-programs.html">Loyalty Programs</a></li>
                         <li><a class="nav-link" href="faq.html">FAQ</a></li>
                         <li><a class="nav-link" href="about-us.html">About Us</a></li>
                         <li><a class="nav-link d-lg-none" href="about.html">Arabic</a></li>
@@ -110,7 +109,7 @@
         </div>
     </section>
 
-    <main class="blogs">
+    <main class="blogs" id="top-sec">
         <!-- recent-blog -->
         <section class="sec-padding">
             <div class="top-sec-m">
@@ -118,7 +117,7 @@
                     <div class="main-title">
                         <h5 class="fw-700">Recent blog posts</h5>
                     </div>
-                    <div class="row blogs-card-container mt-3">
+                    <div class="row align-items-center blogs-card-container gy-4 mt-3">
                         <div class="col-lg-6">
                             <a href="blog-details.html">
                                 <div class="blog-card">
@@ -137,6 +136,48 @@
                                     </div>
                                 </div>
                             </a>
+                        </div>
+                        <div class="col-lg-6 blogs-card-container">
+                            <div class="right-side">
+                                <a href="#">
+                                    <div class="blog-card">
+                                        <div class="d-lg-flex">
+                                            <div class="img-container">
+                                                <img src="images/blogs-card-img.png" class="card-img-top" alt="blog-title">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="date mb-2">Natali Craig • 14 Jan 2022</div>
+                                                <h5 class="card-title">USA lifts sanctions against Xiaomi</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and
+                                                    make
+                                                    up the bulk of the card's
+                                                    content.</p>
+                                                <div class="main-color read-more fw-500">Read Article<i
+                                                        class="fa-solid fa-chevron-right"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="blog-card mt-4">
+                                        <div class="d-lg-flex">
+                                            <div class="img-container">
+                                                <img src="images/blogs-card-img.png" class="card-img-top" alt="blog-title">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="date mb-2">Natali Craig • 14 Jan 2022</div>
+                                                <h5 class="card-title">USA lifts sanctions against Xiaomi</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and
+                                                    make
+                                                    up the bulk of the card's
+                                                    content.</p>
+                                                <div class="main-color read-more fw-500">Read Article<i
+                                                        class="fa-solid fa-chevron-right"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -326,7 +367,6 @@
             </div>
         </section>
 
-
     </main>
 
     <!-- footer -->
@@ -420,7 +460,7 @@
 
     <script>
         $(document).ready(function () {
-            $('nav').css('background-color', '#1D1B1BC4');
+            $('header nav').css('background-color', '#1D1B1BC4');
 
             $(window).on("scroll", function () {
                 var scroll = $(window).scrollTop();
@@ -432,6 +472,27 @@
 
                 }
                 var scroll = $(window).scrollTop();
+            });
+
+            $('#search-icon').click(function () {
+                var $input = $('#search-input');
+                if ($input.parent().hasClass('expanded')) {
+                    $input.parent().removeClass('expanded').css('width', '0');
+                } else {
+                    $input.parent().addClass('expanded').css('width', '200px'); // Adjust width as needed
+                    $input.focus();
+                }
+                var inputData = $('#search-input').val();
+                if (inputData.trim().length > 0) {
+                    $(this).attr('type', 'submit');
+                } else {
+                    $(this).attr('type', 'button');
+                }
+            });
+
+            $('#mobile-search-icon').click(function () {
+                // Slide the target div
+                $('#mobile-search').slideToggle();
             });
 
             $("#contact-form").validate({
