@@ -37,11 +37,11 @@ body {
   background-color: var(--gray-5);
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 1600px) {
   .container {
     max-width: 1600px;
   }
-}
+} */
 
 /* main components */
 .sec-padding {
@@ -149,7 +149,6 @@ form input:focus {
 }
 
 @media (max-width: 767px) {
-
   .main-btn,
   .secondary-btn {
     font-size: 14px;
@@ -310,6 +309,10 @@ header .top-header .links a {
 }
 
 header .top-header .links a:hover {
+  color: var(--main-color);
+}
+
+header .top-header .links a.active {
   color: var(--main-color);
 }
 
@@ -493,7 +496,7 @@ header nav .dropdown-menu li:not(:last-child) {
     background-color: var(--white);
   }
 
-  #click:checked~ul {
+  #click:checked ~ ul {
     bottom: 0;
   }
 
@@ -532,7 +535,7 @@ header nav .dropdown-menu li:not(:last-child) {
     color: var(--white) !important;
   }
 
-  #click:checked~ul li .nav-link {
+  #click:checked ~ ul li .nav-link {
     margin-left: 0px;
   }
 
@@ -845,7 +848,6 @@ header nav .dropdown-menu li:not(:last-child) {
 
 .home .how-to-register h3 span {
   color: var(--main-color);
-  font-size: 70px;
   font-weight: 500;
 }
 
@@ -1101,6 +1103,14 @@ header nav .dropdown-menu li:not(:last-child) {
 /* brokers */
 
 /* nav */
+.tab-content > .tab-pane {
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.tab-content > .active {
+  height: auto;
+}
 .home .nav-pills .nav-link {
   color: var(--main-color);
   margin: 10px;
@@ -1112,7 +1122,7 @@ header nav .dropdown-menu li:not(:last-child) {
 
 .home .nav-pills .nav-link.active,
 .home .nav-pills .nav-link:hover,
-.home .nav-pills .show>.nav-link {
+.home .nav-pills .show > .nav-link {
   background-color: transparent;
   border: none;
   outline: none;
@@ -1126,6 +1136,19 @@ header nav .dropdown-menu li:not(:last-child) {
   border-radius: 20px;
   padding: 25px;
   box-shadow: 0px 0px 7px #9f9f9f99;
+  position: relative;
+}
+
+.brokers .brokers-card-container .broker-card .offers {
+  position: absolute;
+  right: 3%;
+  top: 2%;
+  color: var(--main-button-hover);
+  font-weight: 500;
+  border: 1px solid var(--main-button-hover);
+  border-radius: 15px;
+  padding: 1px 10px;
+  background-color: #0095d04d;
 }
 
 .brokers .brokers-card-container .broker-card img {
@@ -1162,11 +1185,11 @@ header nav .dropdown-menu li:not(:last-child) {
   display: block;
 }
 
-.home .slick-next:before {
+.slick-next:before {
   content: "\f35a";
 }
 
-.home .slick-prev:before {
+.slick-prev:before {
   content: "\f359";
 }
 
@@ -1179,21 +1202,21 @@ header nav .dropdown-menu li:not(:last-child) {
   z-index: 1;
 }
 
-.home .slick-prev.slick-disabled:before,
-.home .slick-next.slick-disabled:before {
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
   opacity: 0.6;
 }
 
-.home .slick-next:before,
-.home .slick-prev:before {
+.slick-next:before,
+.slick-prev:before {
   font-family: "Font Awesome 5 Free";
   color: var(--gray-light-2);
   font-size: 36px;
   transition: var(--transition);
 }
 
-.home .slick-next:hover:before,
-.home .slick-prev:hover:before {
+.slick-next:hover:before,
+.slick-prev:hover:before {
   color: var(--main-color) !important;
 }
 
@@ -1270,7 +1293,7 @@ header nav .dropdown-menu li:not(:last-child) {
   font-size: 20px;
 }
 
-.home .withdrawal-sec .table-container .table> :not(caption)>*>* {
+.home .withdrawal-sec .table-container .table > :not(caption) > * > * {
   background-color: transparent;
   color: var(--white);
 }
@@ -1320,16 +1343,12 @@ header nav .dropdown-menu li:not(:last-child) {
 /* end withdrawal-sec */
 /* ---------------------------------------------- */
 /* start clients-reviews */
-.home .clients-reviews h3 {
-  font-size: 42px;
-}
-
-.home .clients-reviews .reviews-container {
+.clients-reviews .reviews-container {
   padding: 0 10%;
   margin-top: 10px;
 }
 
-.home .clients-reviews .reviews-container .review {
+.clients-reviews .reviews-container .review {
   padding: 30px 20px;
   background-color: var(--white);
   border-radius: 25px;
@@ -1337,25 +1356,25 @@ header nav .dropdown-menu li:not(:last-child) {
   margin: 0 15px;
 }
 
-.home .clients-reviews .reviews-container .review h4 {
+.clients-reviews .reviews-container .review h4 {
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 0;
 }
 
-.home .clients-reviews .reviews-container .review .review-title {
+.clients-reviews .reviews-container .review .review-title {
   color: var(--gray-1);
 }
 
-.home .clients-reviews .reviews-container .review .total-reviews span {
+.clients-reviews .reviews-container .review .total-reviews span {
   color: var(--gray-3);
 }
 
-.home .clients-reviews .reviews-container .review .total-reviews span.checked {
+.clients-reviews .reviews-container .review .total-reviews span.checked {
   color: var(--main-color);
 }
 
-.home .clients-reviews .reviews-container .review p {
+.clients-reviews .reviews-container .review p {
   font-size: 18px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1363,42 +1382,42 @@ header nav .dropdown-menu li:not(:last-child) {
   overflow: hidden;
 }
 
-.home .clients-reviews .slick-prev {
+.clients-reviews .slick-prev {
   left: 5%;
   z-index: 1;
 }
 
-.home .clients-reviews .slick-next {
+.clients-reviews .slick-next {
   right: 6%;
 }
 
-.home .clients-reviews .slick-dots li button:hover:before {
+.clients-reviews .slick-dots li button:hover:before {
   color: var(--main-color);
 }
 
 @media (max-width: 992px) {
-  .home .clients-reviews .reviews-container {
+  .clients-reviews .reviews-container {
     padding: 0;
   }
 
-  .home .clients-reviews .reviews-container .review {
+  .clients-reviews .reviews-container .review {
     margin-bottom: 10px;
   }
 
-  .home .clients-reviews h3 {
+  .clients-reviews h3 {
     font-size: 32px;
     text-align: center;
   }
 
-  .home .clients-reviews .reviews-container .review h4 {
+  .clients-reviews .reviews-container .review h4 {
     font-size: 20px;
   }
 
-  .home .clients-reviews .reviews-container .review .review-title {
+  .clients-reviews .reviews-container .review .review-title {
     font-size: 14px;
   }
 
-  .home .clients-reviews .reviews-container .review p {
+  .clients-reviews .reviews-container .review p {
     font-size: 16px;
   }
 }
@@ -1492,8 +1511,6 @@ header nav .dropdown-menu li:not(:last-child) {
   background-image: url("../images/contact-sec-bg.png");
   background-position: bottom;
   background-size: cover;
-  height: 100vh;
-
   position: relative;
   min-height: 80vh;
 }
@@ -2048,11 +2065,283 @@ footer .copy-rights a:hover {
 
 /* broker-details */
 .broker-details .description h4 {
+  font-size: 24px;
+}
+.broker-details .description p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.broker-details .card-container .broker-card figure img {
+  border-radius: 15px;
+  max-width: 200px;
+}
+
+.broker-details .card-container .broker-card .total-reviews span {
+  color: var(--gray-4);
+}
+
+.broker-details .card-container .broker-card .total-reviews span.checked {
+  color: var(--main-color);
+}
+
+.broker-details .card-container .broker-card .num-of-reviews {
+  font-size: 14px;
+}
+
+.broker-details .card-container .broker-card .links div {
+  max-width: 250px;
+  margin: auto;
+}
+
+.broker-details .card-container .broker-card .links div a {
+  width: 100%;
+  display: block;
+}
+.broker-details .card-container .broker-card {
+  margin-top: 20%;
+}
+@media (max-width: 992px) {
+  .broker-details .card-container .broker-card {
+    margin-top: 0;
+  }
+}
+
+/* table */
+.broker-details table thead th {
+  background-color: var(--main-button-hover);
+  font-weight: 700;
+  color: var(--white);
   font-size: 42px;
+  padding: 5px;
+}
+
+.broker-details .table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: var(--white);
+}
+.broker-details .table-striped > tbody > tr:nth-of-type(even) > * {
+  --bs-table-bg-type: #0095d033;
+}
+
+.broker-details table tbody td {
+  padding: 10px 45px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 @media (max-width: 992px) {
   .broker-details .description h4 {
     font-size: 18px;
+  }
+  .broker-details .description p {
+    font-size: 16px;
+  }
+
+  .broker-details .card-container .broker-card figure img {
+    border-radius: 15px;
+    max-width: 150px;
+  }
+}
+/* end-broker-details */
+/* -------------------------------------------------- */
+
+/* advertise-with-us & about-us */
+.advertise-with-us .banner img {
+  border-radius: 15px;
+  margin-top: 10%;
+}
+.advertise-with-us p,
+.about-us p {
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .advertise-with-us .banner img {
+    margin-top: 3%;
+  }
+  .advertise-with-us .side-banner img {
+    max-height: 400px;
+  }
+  .advertise-with-us p,
+  .about-us p {
+    font-size: 16px;
+  }
+  .about-us img {
+    max-height: 300px;
+  }
+}
+/* end advertise-with-us & about-us */
+/* ----------------------------------------------- */
+
+/* start contact-us page */
+.contact-us-page .contact-title h3 {
+  font-size: 72px;
+}
+.contact-us-page .contact-title p {
+  font-size: 24px;
+}
+.contact-us-page .contact-us-sec .form-container {
+  position: static;
+  width: 40%;
+  background-color: #fafafa3b;
+}
+
+.contact-us-page .contact-us-sec {
+  height: auto;
+}
+.contact-us-page .contact-us-sec .form-container form label {
+  color: var(--white);
+}
+
+.contact-us-page .connect-with-us {
+  background-color: #101a1f;
+}
+
+.contact-us-page .connect-with-us h4 {
+  font-size: 68px;
+}
+.contact-us-page .connect-with-us p {
+  font-size: 24px;
+}
+
+.contact-us-page .connect-with-us .social-links a {
+  color: var(--white);
+}
+
+.contact-us-page .connect-with-us .social-links a:hover i {
+  color: #fefefe99;
+}
+
+.contact-us-page .connect-with-us .social-links a i {
+  font-size: 28px;
+}
+
+@media (max-width: 992px) {
+  .contact-us-page .contact-us-sec .form-container {
+    width: 80%;
+  }
+  .contact-us-page .contact-title h3 {
+    font-size: 32px;
+  }
+  .contact-us-page .contact-title p {
+    font-size: 16px;
+  }
+
+  .contact-us-page .connect-with-us h4 {
+    font-size: 30px;
+  }
+  .contact-us-page .connect-with-us p {
+    font-size: 18px;
+  }
+  .contact-us-page .connect-with-us .social-links a i {
+    font-size: 22px;
+  }
+}
+
+/* forex-analysis-details */
+.forex-analysis-datails .main-img img {
+  border-radius: 15px;
+}
+
+.forex-analysis-datails .desc h2 {
+  font-size: 32px;
+}
+.forex-analysis-datails .desc p {
+  font-size: 18px;
+}
+@media (max-width: 992px) {
+  .forex-analysis-datails .desc .date {
+    font-size: 14px;
+  }
+  .forex-analysis-datails .desc h2 {
+    font-size: 18px;
+  }
+  .forex-analysis-datails .desc p {
+    font-size: 16px;
+  }
+  .side-banner img {
+    max-height: 450px;
+  }
+}
+/* end forex-analysis-details */
+/* ---------------------------------------- */
+
+/* start forex-insights */
+.forex-insights .blogs-card-container .blog-card .card-body .color {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+/* end forex-insights */
+/* -------------------------------------- */
+
+/* start forex-course */
+.forex-course .main-img img {
+  border-radius: 15px;
+}
+.forex-course h2 {
+  font-size: 32px;
+}
+.forex-course p {
+  font-size: 18px;
+}
+@media (max-width: 992px) {
+  .forex-course h2 {
+    font-size: 18px;
+  }
+  .forex-course p {
+    font-size: 16px;
+  }
+}
+/* end-forex */
+/* -------------------------------------------- */
+
+/* start account */
+/* main */
+.account .user h3 {
+  font-size: 24px;
+}
+.account .user {
+  border-radius: 25px;
+  background-color: var(--white);
+  padding: 20px;
+}
+
+.account .user .user-img img {
+  border-radius: 50%;
+}
+
+.account .user .edit-account a {
+  color: var(--gray-1);
+  font-weight: 500;
+}
+.account .user .edit-account a i {
+  transition: unset;
+}
+.account .user .edit-account a:hover {
+  color: var(--basic);
+}
+
+.account .client-aria {
+  border-left: 3px solid var(--main-color);
+  padding-left: 10px;
+}
+
+.account .client-aria h4 {
+  font-size: 24px;
+}
+
+.account .client-aria p {
+  color: var(--gray-1);
+  font-size: 20px;
+}
+
+@media (max-width: 992px) {
+  .account .user h3 {
+    font-size: 20px;
+  }
+  .account .client-aria p {
+    font-size: 14px;
   }
 }
