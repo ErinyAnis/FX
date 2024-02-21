@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <title>Account-overview | FX</title>
+    <title>Account-trading-accounts | FX</title>
 </head>
 
 <body>
@@ -141,13 +141,14 @@
                         <div class="sidebar order-2 order-lg-1 col-lg-3 mt-3 mt-lg-0">
                             <aside>
                                 <div class="link-container">
-                                    <a href="account-overview.html" class="active d-flex gap-3 align-items-center">
+                                    <a href="account-overview.html" class="d-flex gap-3 align-items-center">
                                         <i class="fa-solid fa-house"></i>
                                         <h5>Overview</h5>
                                     </a>
                                 </div>
                                 <div class="link-container">
-                                    <a href="account-trading-accounts.html" class="d-flex gap-3 align-items-center">
+                                    <a href="account-trading-accounts.html"
+                                        class="active d-flex gap-3 align-items-center">
                                         <i class="fa-solid fa-money-bill-transfer"></i>
                                         <h5>Trading Accounts</h5>
                                     </a>
@@ -197,70 +198,52 @@
 
                             </aside>
                         </div>
-                        <div class="account-overview col-lg-9 order-1 order-lg-2">
-                            <div class="row gy-4">
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-sack-dollar"></i>
-                                        <div class="flex-1">
-                                            <h3 class="fw-600">Total Profits</h3>
-                                            <div class="price">0.00$</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
+                        <div class="account-trading-accounts col-lg-9 order-1 order-lg-2">
+                            <div class="data-holder trading-accounts">
+                                <div class="d-flex align-items-center justify-content-between gap-1">
+                                    <div class="d-flex align-items-center gap-2 gap-lg-3">
                                         <i class="fa-solid fa-money-bill-transfer"></i>
-                                        <div>
-                                            <h3 class="fw-600">Trading Accounts</h3>
-                                            <div class="price">0.00$</div>
+                                        <h3 class="fw-700 mb-0">Trading Accounts</h3>
+                                    </div>
+                                    <button type="button" class="main-btn" data-bs-toggle="modal"
+                                        data-bs-target="#addAccount">Add account</button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="addAccount" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h2 class="modal-title fw-700 main-color" id="addAccount">Add
+                                                        Account</h2>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body mt-2">
+                                                    <form id="addAccountForm" action="#">
+                                                        <div class="mb-3">
+                                                            <label for="accountNumber" class="form-label">Account
+                                                                Number*</label>
+                                                            <input type="text" name="accountNumber" class="form-control"
+                                                                id="accountNumber" placeholder="Add your account number"
+                                                                required>
+                                                        </div>
+                                                        <div>
+                                                            <label for="broker" class="form-label">Broker*</label>
+                                                            <select class="form-select" name="chooseBroker" required>
+                                                                <option selected disabled>Choose Broker</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-center mt-3">
+                                                            <button type="submit"
+                                                                class="main-btn ps-4 pe-4 ps-lg-5 pe-lg-5">Save</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-file-invoice-dollar"></i>
-                                        <div>
-                                            <h3 class="fw-600">Accounts Profits</h3>
-                                            <div class="price">0.00$</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                                        <div>
-                                            <h3 class="fw-600">Registered from my referral</h3>
-                                            <div class="price">0.00$</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-coins"></i>
-                                        <div>
-                                            <h3 class="fw-600">Referral Profits</h3>
-                                            <div class="price">0.00$</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-chart-line"></i>
-                                        <div>
-                                            <h3 class="fw-600">Total Withdrawal</h3>
-                                            <div class="price">0.00$</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-trophy"></i>
-                                        <div>
-                                            <h3 class="fw-600">Loyalty Program</h3>
-                                            <div class="price">0.00$</div>
-                                        </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +251,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- contact-us -->
         <section class="contact-us-sec sec-padding mb-0">
@@ -483,6 +465,30 @@
                     },
                     message: {
                         required: "please enter your message",
+                    },
+                },
+
+                submitHandler: function (form) {
+
+                    $(form).submit();
+                }
+            });
+
+            $("#addAccountForm").validate({
+                rules: {
+                    accountNumber: {
+                        required: true,
+                    },
+                    chooseBroker: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    accountNumber: {
+                        required: "please enter your account number",
+                    },
+                    chooseBroker: {
+                        required: "please choose a broker",
                     },
                 },
 

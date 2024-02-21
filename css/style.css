@@ -92,7 +92,7 @@ ul {
   color: var(--white);
   border: 1px solid var(--main-color);
   border-radius: 5px;
-  padding: 7px 20px;
+  padding: 7px 30px;
   transition: var(--transition);
   font-size: 18px;
 }
@@ -104,7 +104,7 @@ ul {
 }
 
 .secondary-btn {
-  padding: 7px 20px;
+  padding: 7px 30px;
   border-radius: 5px;
   transition: var(--transition);
   color: var(--main-color);
@@ -148,11 +148,11 @@ form input:focus {
   } */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .main-btn,
   .secondary-btn {
     font-size: 14px;
-    padding: 8px 18px;
+    padding: 8px 24px;
   }
 }
 
@@ -437,10 +437,25 @@ header nav .menu-btn img {
 
 header nav .dropdown-menu {
   font-weight: 500;
+  padding: 0;
+}
+
+header nav .dropdown-menu a {
+  transition: unset;
 }
 
 header nav .dropdown-menu li {
   margin-left: 0 !important;
+  padding: 3px 12px;
+  transition: var(--transition);
+}
+
+header nav .dropdown-menu li:hover {
+  background-color: var(--gray-4);
+}
+
+header nav .dropdown-menu li:hover a {
+  background-color: transparent;
 }
 
 header nav .dropdown-menu li:not(:last-child) {
@@ -700,19 +715,19 @@ header nav .dropdown-menu li:not(:last-child) {
   bottom: 25px;
 }
 
-.home .hero-sec-slider .slick-dots li button:before {
+.slick-dots li button:before {
   color: var(--gray-4);
 }
 
-.home .slick-dots li.slick-active button:before {
+.slick-dots li.slick-active button:before {
   color: var(--main-color);
 }
 
-.home .slick-dots li button:before {
+.slick-dots li button:before {
   font-size: 12px;
 }
 
-.home .slick-dots li {
+.slick-dots li {
   margin: 0 2px;
 }
 
@@ -1538,6 +1553,7 @@ header nav .dropdown-menu li:not(:last-child) {
   right: 2%;
   top: -3%;
   width: 30%;
+  box-shadow: 0 0 25px 0 #00000026;
 }
 
 .contact-us-sec .form-container label {
@@ -1556,8 +1572,8 @@ header nav .dropdown-menu li:not(:last-child) {
   border-color: var(--gray-3);
 }
 
-.contact-us-sec .form-container label.error {
-  font-size: 14px;
+label.error {
+  font-size: 14px !important;
   color: var(--error);
 }
 
@@ -1606,6 +1622,16 @@ header nav .dropdown-menu li:not(:last-child) {
   font-weight: bold;
   color: var(--white);
   margin-top: 12px;
+}
+
+@media (max-width: 992px) {
+  .up-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .up-arrow i {
+    font-size: 18px;
+  }
 }
 
 /* footer */
@@ -2101,13 +2127,17 @@ footer .copy-rights a:hover {
 .broker-details .card-container .broker-card {
   margin-top: 20%;
 }
-@media (max-width: 992px) {
-  .broker-details .card-container .broker-card {
-    margin-top: 0;
-  }
+
+.broker-details iframe {
+  text-align: center;
+  width: 80%;
+  min-height: 400px;
 }
 
 /* table */
+.broker-details table {
+  text-wrap: nowrap;
+}
 .broker-details table thead th {
   background-color: var(--main-button-hover);
   font-weight: 700;
@@ -2122,14 +2152,26 @@ footer .copy-rights a:hover {
 .broker-details .table-striped > tbody > tr:nth-of-type(even) > * {
   --bs-table-bg-type: #0095d033;
 }
-
+.broker-details table td:first-child {
+  font-size: 18px;
+}
 .broker-details table tbody td {
   padding: 10px 45px;
-  font-size: 18px;
+
   font-weight: 500;
 }
 
 @media (max-width: 992px) {
+  .broker-details table thead th {
+    font-size: 20px;
+  }
+  .broker-details .card-container .broker-card {
+    margin-top: 0;
+  }
+  .broker-details iframe {
+    width: 90%;
+    min-height: 250px;
+  }
   .broker-details .description h4 {
     font-size: 18px;
   }
@@ -2141,7 +2183,20 @@ footer .copy-rights a:hover {
     border-radius: 15px;
     max-width: 150px;
   }
+  .broker-details table td {
+    font-size: 14px;
+  }
+  .broker-details table td:first-child {
+    font-size: 16px;
+  }
+  .broker-details .slick-dots li button:before {
+    color: var(--gray-2);
+  }
+  .broker-details .slick-dots li.slick-active button:before {
+    color: var(--main-color);
+  }
 }
+
 /* end-broker-details */
 /* -------------------------------------------------- */
 
@@ -2337,11 +2392,681 @@ footer .copy-rights a:hover {
   font-size: 20px;
 }
 
+/* account -> sidebar */
+.account .sidebar aside {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 25px;
+}
+
+.account .sidebar aside i {
+  color: var(--main-color);
+  font-size: 20px;
+}
+.account .sidebar h5 {
+  margin-bottom: 0;
+  font-size: 18px;
+  color: var(--gray-1);
+  font-weight: 500;
+}
+.account .sidebar .link-container:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.account .sidebar .link-container a {
+  padding: 10px;
+  border-radius: 5px;
+}
+.account .sidebar .link-container a.active,
+.account .sidebar .link-container a:hover {
+  background-color: #c4c4c433;
+}
+.account .account-overview .info {
+  background-color: var(--white);
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: 1px solid var(--main-color);
+  height: 130px;
+}
+
+.account .account-overview .info:hover {
+  box-shadow: 0 0 12px 0 #15151533;
+}
+
+.account .account-overview .info i {
+  color: var(--gray-2);
+  font-size: 40px;
+}
+
+.account .account-overview .info h3 {
+  color: var(--main-color);
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.account .account-overview .info .price {
+  color: var(--gray-1);
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 1200px) {
+  .account .sidebar h5 {
+    font-size: 16px;
+  }
+  .account .sidebar aside i {
+    font-size: 18px;
+  }
+  .account .user h3 {
+    font-size: 20px;
+  }
+  .account .user .edit-account a {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 992px) {
+  .account .user .user-img img {
+    max-height: 80px;
+  }
   .account .user h3 {
     font-size: 20px;
   }
   .account .client-aria p {
     font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .account .account-overview .info {
+    height: 100px;
+  }
+  .account .account-overview .info i {
+    font-size: 30px;
+  }
+}
+/* end-account-overview */
+/* -------------------------------------------- */
+
+/* start account-trading-accounts */
+.account .account-trading-accounts .trading-accounts i {
+  color: var(--gray-1);
+  font-size: 24px;
+}
+
+.account .account-trading-accounts .trading-accounts h3 {
+  font-size: 24px;
+}
+
+.account .modal .modal-content {
+  padding: 26px 20px 8px;
+}
+.account .modal .modal-content form select option {
+  color: var(--basic);
+}
+.account .modal .modal-header {
+  padding: 5px 17px;
+}
+.account .modal .modal-header .btn-close {
+  box-shadow: none;
+}
+.account .modal .modal-header h2 {
+  font-size: 24px;
+}
+.account .modal .modal-footer {
+  border: none;
+}
+.account form label {
+  margin-bottom: 3px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.account form input,
+.account form select {
+  background-color: var(--gray-5);
+  border-color: var(--gray-4);
+  font-size: 14px;
+  padding: 8px 10px;
+  color: var(--gray-2);
+}
+.account form input:focus,
+.account form select:focus {
+  border-color: var(--gray-2);
+  background-color: var(--gray-5);
+  box-shadow: none;
+}
+.account form select {
+  box-shadow: none;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .account .account-trading-accounts .trading-accounts .modal .modal-header h2 {
+    font-size: 20px;
+  }
+  .account
+    .account-trading-accounts
+    .trading-accounts
+    .modal
+    .modal-header
+    .btn-close {
+    font-size: 12px;
+    box-shadow: none;
+  }
+  .account .account-trading-accounts .trading-accounts .modal form label {
+    font-size: 16px;
+  }
+  .account .account-trading-accounts .trading-accounts h3 {
+    font-size: 16px;
+  }
+  .account .account-trading-accounts .trading-accounts i {
+    font-size: 18px;
+  }
+  .account .account-trading-accounts .trading-accounts .main-btn {
+    padding: 8px 14px;
+  }
+}
+/* end account-trading-accounts  */
+/* ------------------------------------------ */
+/* main border and padding */
+.account .data-holder {
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  padding: 3% 8%;
+  background-color: #fefefe66;
+}
+
+/* start account -> edit profile */
+.account .account-edit-profile .personal-info-container h5 {
+  font-size: 28px;
+}
+.account .account-edit-profile .personal-info-container .custom-file-upload {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.account
+  .account-edit-profile
+  .personal-info-container
+  .custom-file-upload
+  input[type="file"] {
+  display: none;
+}
+
+.account .account-edit-profile .personal-info-container .upload-icon i {
+  color: var(--main-color);
+  font-size: 24px;
+}
+
+.account .account-edit-profile .personal-info-container .upload-icon {
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.account .account-edit-profile .personal-info-container .upload-text {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--gray-2);
+  font-size: 18px;
+}
+
+.account .account-edit-profile form select option {
+  color: var(--basic);
+}
+
+/* Style the selected file name */
+.custom-file-upload input[type="file"]:not([disabled]):focus + .upload-icon,
+.custom-file-upload input[type="file"]:not([disabled]):active + .upload-icon {
+  border-color: #2d9cdb;
+}
+
+.account-edit-profile .personal-info-container .iti {
+  width: 100% !important;
+}
+.account-edit-profile .personal-info-container .iti {
+  width: 100% !important;
+}
+
+@media (max-width: 992px) {
+  .account .data-holder {
+    padding: 20px;
+  }
+  .account .account-edit-profile .personal-info-container h5 {
+    font-size: 18px;
+  }
+  .account .account-edit-profile .personal-info-container .upload-icon {
+    width: 85px;
+    height: 85px;
+  }
+  .account .account-edit-profile .personal-info-container .upload-icon i {
+    font-size: 20px;
+  }
+  .account .account-edit-profile .personal-info-container .upload-text {
+    font-size: 16px;
+  }
+}
+/* end account -> edit profile */
+
+/* start account -> total withdrawal-methods */
+.account .account-withdrawal-methods .withdrawal-container h3 {
+  font-size: 28px;
+}
+
+.account .account-withdrawal-methods .items-holder {
+  text-align: center;
+}
+.account .account-withdrawal-methods .line {
+  position: relative;
+  border-top: 1px solid var(--gray-1);
+}
+
+.account .account-withdrawal-methods .line:not(:last-child):after {
+  content: "";
+  position: absolute;
+  height: 101%;
+  width: 1px;
+  right: -3%;
+  top: -25%;
+  background-color: var(--gray-1);
+}
+.account .account-withdrawal-methods .withdrawal-item {
+  padding-bottom: 6px;
+}
+.account .account-withdrawal-methods .withdrawal-item h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.account .account-withdrawal-methods .items-holder .data {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 24px;
+}
+.account .account-withdrawal-methods .items-holder .delete-btn {
+  cursor: pointer;
+}
+.account .account-withdrawal-methods .items-holder .delete-btn i {
+  color: var(--error);
+}
+@media (max-width: 1400px) {
+  .account .account-withdrawal-methods .withdrawal-item h3 {
+    font-size: 16px;
+  }
+  .account .account-withdrawal-methods .items-holder .data {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .account .account-withdrawal-methods .withdrawal-item {
+    border-bottom: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+  .account .account-withdrawal-methods .headers {
+    min-width: 20%;
+  }
+
+  .account .account-withdrawal-methods .withdrawal-item h3 {
+    margin: 0;
+    height: auto;
+  }
+  .account .account-withdrawal-methods .items-holder .data {
+    line-height: 16px;
+    padding-left: 20px;
+    height: auto;
+  }
+  .account .account-withdrawal-methods .items-holder {
+    text-align: left;
+  }
+  .account .account-withdrawal-methods .items-holder .col {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-top: none;
+  }
+
+  .account .account-withdrawal-methods .line:not(:last-child):after {
+    position: static;
+    height: 0;
+  }
+  .account .account-withdrawal-methods .items-holder .col:last-child {
+    padding-bottom: 0;
+  }
+  .account .account-withdrawal-methods .items-holder .col:not(:last-child) {
+    border-bottom: 1px solid var(--gray-4);
+  }
+  .account .account-withdrawal-methods .headers .col {
+    border-right: 1px solid var(--gray-4);
+  }
+  .account .account-withdrawal-methods .rows {
+    min-width: 35%;
+  }
+  .account .account-withdrawal-methods .rows:not(:last-child) {
+    border-right: 1px solid var(--gray-4);
+  }
+  .account .account-withdrawal-methods .data-container {
+    max-width: 700px;
+    overflow-y: auto;
+  }
+
+  /* scrollbar */
+  .account .account-withdrawal-methods .data-container::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .account
+    .account-withdrawal-methods
+    .data-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .account
+    .account-withdrawal-methods
+    .data-container::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .account
+    .account-withdrawal-methods
+    .data-container::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+/* end account-withdrawal-methods */
+/* ------------------------------------------------ */
+
+/* successed and fail added-withdrawal */
+.account .status .successed-bg,
+.account .status .failed-added-withdrawal,
+.account .loyalty-programs .warning-text {
+  padding: 5px 20px;
+}
+.account .status .successed-bg {
+  background-color: #58c41633;
+}
+.account .status .failed-added-withdrawal {
+  background-color: #c416171a;
+}
+.account .status .successed-bg p,
+.account .status .failed-added-withdrawal p,
+.account .loyalty-programs .warning-text p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .account .status .successed-bg p,
+  .account .status .failed-added-withdrawal p,
+  .account .loyalty-programs .warning-text p {
+    font-size: 14px;
+  }
+}
+/* end successed and fail added-withdrawal  */
+/* ------------------------------------------------------- */
+
+/* payments-log  */
+.account .payments-log .payments-title,
+.account .referral .profits-title {
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--gray-3);
+}
+.account .payments-log .payments-title i {
+  font-size: 22px;
+  color: var(--gray-1);
+}
+.account .payments-log .payments-title h3 {
+  font-size: 24px;
+}
+
+.account .payments-log .total-payments h4 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+.account .payments-log .total-payments {
+  display: flex;
+}
+/* sorting-side */
+.account .payments-log .total-payments .sorting {
+  display: flex;
+}
+.account .payments-log .total-payments .sorting select option {
+  color: var(--basic);
+}
+
+.account .payments-log .total-payments .sorting .main-btn {
+  padding: 5px 15px;
+}
+.account .payments-log .total-payments .sorting select {
+  max-width: 150px;
+}
+@media (max-width: 1400px) {
+  .account .payments-log .total-payments h4 {
+    font-size: 18px;
+  }
+  .account .payments-log .total-payments .sorting .main-btn {
+    font-size: 16px;
+  }
+  .account .payments-log .total-payments .sorting select {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .account .payments-log .total-payments {
+    display: block;
+  }
+  .account .payments-log .total-payments .sorting {
+    display: block;
+    margin-top: 8px;
+  }
+  .account .payments-log .total-payments .sorting select {
+    display: inline-block;
+    margin-right: 7px;
+    margin-top: 3px;
+  }
+  .account .payments-log .total-payments .main-btn {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .account .payments-log .payments-title i,
+  .account .payments-log .payments-title h3 {
+    font-size: 18px;
+  }
+}
+/* end-payments-log */
+/* ---------------------------------------------------- */
+
+/* referral */
+.account .referral .link-container p {
+  font-size: 20px;
+}
+.account .referral .link-container .copy-link-input {
+  color: var(--main-button-hover);
+  background-color: var(--white);
+}
+.account .referral .link-container .main-btn {
+  padding: 5px 18px;
+}
+.account .referral .profits-title h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .account .referral .link-container p {
+    font-size: 18px;
+  }
+  .account .referral .link-container .main-btn {
+    padding: 7px 18px;
+  }
+}
+/* end-referral */
+/* --------------------------------------------- */
+
+/* loyalty programs */
+.account .loyalty-programs .warning-text {
+  background-color: #ffecb4;
+}
+.account .loyalty-programs .warning-text a {
+  color: var(--main-color);
+}
+.account .loyalty-programs .warning-text a:hover {
+  color: var(--main-button-hover);
+}
+.account .loyalty-programs form input[type="checkbox"] {
+  padding: 7px;
+  margin-top: 6px;
+  cursor: pointer;
+  border-color: var(--main-color);
+  color: var(--white);
+}
+.account .loyalty-programs form input[type="checkbox"]:checked {
+  background-color: var(--main-color);
+}
+.account .loyalty-programs form label {
+  margin-bottom: 0;
+}
+/* registered */
+.account .loyalty-programs .points {
+  font-size: 18px;
+}
+
+.account .loyalty-programs .client-wrapper {
+  margin-top: 75px;
+}
+
+.account .loyalty-programs .client-wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.account .loyalty-programs .client-wrapper ul li {
+  position: relative;
+  padding: 6px 28px;
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid var(--main-color);
+  text-align: center;
+}
+.account .loyalty-programs .client-wrapper ul li span {
+  position: absolute;
+  top: -50%;
+  font-size: 18px;
+  min-width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--basic);
+}
+.account .loyalty-programs .client-wrapper ul li:first-child {
+  color: var(--main-color);
+}
+.account .loyalty-programs .client-wrapper ul li:not(:first-child) {
+  color: var(--white);
+  background-color: var(--main-color);
+}
+
+.account .loyalty-programs .client-wrapper ul li:nth-child(2):before,
+.account .loyalty-programs .client-wrapper ul li:nth-child(2):after {
+  content: "";
+  position: absolute;
+  background: var(--main-color);
+  height: 2px;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 205px;
+}
+
+.account .loyalty-programs .client-wrapper ul li:nth-child(2):before {
+  left: -147%;
+}
+
+.account .loyalty-programs .client-wrapper ul li:nth-child(2):after {
+  right: -147%;
+}
+@media (max-width: 1400px) {
+  .account .loyalty-programs .client-wrapper ul li:nth-child(2):before {
+    left: -106%;
+    width: 150px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .account .loyalty-programs .client-wrapper ul li:nth-child(2):before {
+    left: -65%;
+    width: 90px;
+  }
+}
+@media (max-width: 992px) {
+  .account .loyalty-programs form input[type="checkbox"] {
+    padding: 5px;
+  }
+  .account .loyalty-programs form label {
+    font-size: 12px;
+  }
+  .account .loyalty-programs .points {
+    font-size: 12px;
+  }
+  .account .loyalty-programs .client-wrapper ul li span {
+    font-size: 14px;
+  }
+  .account .loyalty-programs .client-wrapper ul li:nth-child(2):before {
+    width: 128px;
+    left: -91%;
+  }
+  .account .loyalty-programs .client-wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .account .loyalty-programs .client-wrapper ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .account .loyalty-programs .client-wrapper ul li {
+    width: 40%;
+    margin: 45px auto;
+    padding: 7px 12px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .account .loyalty-programs .client-wrapper ul li span {
+    top: -37%;
+  }
+
+  .account .loyalty-programs .client-wrapper ul li:nth-child(2):before,
+  .account .loyalty-programs .client-wrapper ul li:nth-child(2):after {
+    height: 62px;
+    width: 2px;
+    left: 50%;
+    transform: translatey(-50%);
+  }
+  .account .loyalty-programs .client-wrapper ul li:nth-child(2):before {
+    top: -151%;
+  }
+
+  .account .loyalty-programs .client-wrapper ul li:nth-child(2):after {
+    top: 186%;
   }
 }

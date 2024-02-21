@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="vendor/slick-carousel/css/slick-theme.css">
     <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/tell-input/css/intlTelInput.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <title>Account-overview | FX</title>
+    <title>Account-edit-profile | FX</title>
 </head>
 
 <body>
@@ -141,7 +142,7 @@
                         <div class="sidebar order-2 order-lg-1 col-lg-3 mt-3 mt-lg-0">
                             <aside>
                                 <div class="link-container">
-                                    <a href="account-overview.html" class="active d-flex gap-3 align-items-center">
+                                    <a href="account-overview.html" class="d-flex gap-3 align-items-center">
                                         <i class="fa-solid fa-house"></i>
                                         <h5>Overview</h5>
                                     </a>
@@ -197,71 +198,90 @@
 
                             </aside>
                         </div>
-                        <div class="account-overview col-lg-9 order-1 order-lg-2">
-                            <div class="row gy-4">
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-sack-dollar"></i>
-                                        <div class="flex-1">
-                                            <h3 class="fw-600">Total Profits</h3>
-                                            <div class="price">0.00$</div>
+                        <div class="account-edit-profile col-lg-9 order-1 order-lg-2">
+                            <div class="data-holder personal-info-container">
+                                <form id="personal-info-form" action="#">
+                                    <h5 class="text-center fw-600">Change personal information</h5>
+                                    <div class="text-center">
+                                        <label for="fileUpload" class="custom-file-upload">
+                                            <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                            <span class="upload-text">Upload your photo</span>
+                                            <input type="file" id="fileUpload" name="fileUpload" accept="image/*">
+                                        </label>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="firstName" class="form-label">First name</label>
+                                                <input type="text" name="firstName" value="Ahmed" class="form-control"
+                                                    id="firstName">
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-money-bill-transfer"></i>
-                                        <div>
-                                            <h3 class="fw-600">Trading Accounts</h3>
-                                            <div class="price">0.00$</div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="lastName" class="form-label">Last name</label>
+                                                <input type="text" value="Mohamed" name="lastName" class="form-control"
+                                                    id="lastName">
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-file-invoice-dollar"></i>
-                                        <div>
-                                            <h3 class="fw-600">Accounts Profits</h3>
-                                            <div class="price">0.00$</div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="phone" class="form-label">Mobile number</label>
+                                                <input type="text" class="form-control tel-input" value=""
+                                                    id="mobile_number">
+                                                <input id="phone" type="hidden" name="phone" value="" required
+                                                    autocomplete="">
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                                        <div>
-                                            <h3 class="fw-600">Registered from my referral</h3>
-                                            <div class="price">0.00$</div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="lastName" class="form-label">Country</label>
+                                                <select class="form-select" name="country" required>
+                                                    <option selected disabled>Choose your country</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-coins"></i>
-                                        <div>
-                                            <h3 class="fw-600">Referral Profits</h3>
-                                            <div class="price">0.00$</div>
+                                    </div>
+                                    <h5 class="text-center fw-600 mt-4">Change account inofrmation</h5>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="fullName" class="form-label">Full name</label>
+                                                <input type="text" name="fullName" class="form-control" id="fullName"
+                                                    placeholder="Ahmed Mohamed">
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-chart-line"></i>
-                                        <div>
-                                            <h3 class="fw-600">Total Withdrawal</h3>
-                                            <div class="price">0.00$</div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="email" name="email" class="form-control" id="email"
+                                                    placeholder="ahmed.mohamed66@gmail.com">
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-xl-4">
-                                    <a href="#" class="info d-flex gap-3 align-items-center">
-                                        <i class="fa-solid fa-trophy"></i>
-                                        <div>
-                                            <h3 class="fw-600">Loyalty Program</h3>
-                                            <div class="price">0.00$</div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Pasword</label>
+                                                <input type="password" name="password" class="form-control"
+                                                    id="password" placeholder=".............">
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="passwordConfirmation" class="form-label">Confirm
+                                                    password</label>
+                                                <input type="password" name="passwordConfirmation" class="form-control"
+                                                    id="passwordConfirmation" placeholder=".............">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <button type="submit" class="main-btn">save</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -405,8 +425,10 @@
     <script src="vendor/bootstrap-5.3.0-dist/js/popper.min.js"></script>
     <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
     <script src="vendor/slick-carousel/js/slick.min.js"></script>
-    <script src="js/index.js"></script>
     <script src="vendor/jquery-validate/jquery.validate.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="vendor/tell-input/js/intlTelInput.js"></script>
+
 
     <script>
         $(document).ready(function () {
@@ -491,10 +513,94 @@
                     $(form).submit();
                 }
             });
+
+            $("#personal-info-form").validate({
+                rules: {
+                    firstName: {
+                        required: true,
+                        minlength: 2,
+                    },
+                    lastName: {
+                        required: true,
+                        minlength: 2,
+                    },
+                    country: {
+                        required: true,
+                    },
+                    fullName: {
+                        required: true,
+                        minlength: 2,
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    passwordConfirmation: {
+                        required: true,
+                        equalTo: "#password"
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                },
+                messages: {
+                    firstName: {
+                        required: "please enter your first name",
+                        minlength: "first name must be at least 2 characters"
+                    },
+                    lastName: {
+                        required: "please enter your last name",
+                        minlength: "last name must be at least 2 characters"
+                    },
+                    country: {
+                        required: "please select a country",
+                    },
+                    fullName: {
+                        required: "please enter your full name",
+                        minlength: "full name must be at least 2 characters",
+                    },
+                    password: {
+                        required: "please enter your password",
+                        minlength: "password must be at least 5 characters"
+                    },
+                    passwordConfirmation: {
+                        required: "please confirm your password",
+                        equalTo: "passwords do not match"
+                    },
+                    email: {
+                        required: "Please enter your email address",
+                        email: "Please enter a valid email address"
+                    }
+                },
+
+                submitHandler: function (form) {
+
+                    $(form).submit();
+                }
+            });
+
         });
-
-
     </script>
+
+
+    <script>
+        var phone_number = window.intlTelInput(document.querySelector("#mobile_number"), {
+            separateDialCode: true,
+            preferredCountries: ["eg"],
+            hiddenInput: "full",
+            utilsScript: "vendor/tell-input/js/utils.js"
+        });
+        var $selectedCountryCode = $('.iti__selected-dial-code').text();
+        $("#phone").val($selectedCountryCode);
+        $("body").on('click', '.iti__country', function () {
+            var $countryCode = $(this).find('.iti__dial-code').text();
+            //    alert($countryCode);
+            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+            $("#phone").val($countryCode);
+        });
+    </script>
+
 
 
 </body>
