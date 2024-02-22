@@ -2499,7 +2499,7 @@ footer .copy-rights a:hover {
 .account .modal .modal-content {
   padding: 26px 20px 8px;
 }
-.account .modal .modal-content form select option {
+.account form select option {
   color: var(--basic);
 }
 .account .modal .modal-header {
@@ -2520,7 +2520,8 @@ footer .copy-rights a:hover {
   font-size: 18px;
 }
 .account form input,
-.account form select {
+.account form select,
+.account form textarea {
   background-color: var(--gray-5);
   border-color: var(--gray-4);
   font-size: 14px;
@@ -2528,7 +2529,8 @@ footer .copy-rights a:hover {
   color: var(--gray-2);
 }
 .account form input:focus,
-.account form select:focus {
+.account form select:focus,
+.account form textarea:focus {
   border-color: var(--gray-2);
   background-color: var(--gray-5);
   box-shadow: none;
@@ -2561,6 +2563,9 @@ footer .copy-rights a:hover {
   }
   .account .account-trading-accounts .trading-accounts .main-btn {
     padding: 8px 14px;
+  }
+  .account form label {
+    font-size: 16px;
   }
 }
 /* end account-trading-accounts  */
@@ -2932,15 +2937,16 @@ footer .copy-rights a:hover {
 .account .loyalty-programs .warning-text a:hover {
   color: var(--main-button-hover);
 }
-.account .loyalty-programs form input[type="checkbox"] {
+.account form input[type="checkbox"] {
   padding: 7px;
   margin-top: 6px;
   cursor: pointer;
-  border-color: var(--main-color);
+
   color: var(--white);
 }
-.account .loyalty-programs form input[type="checkbox"]:checked {
+.account form input[type="checkbox"]:checked {
   background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 .account .loyalty-programs form label {
   margin-bottom: 0;
@@ -3016,7 +3022,7 @@ footer .copy-rights a:hover {
   }
 }
 @media (max-width: 992px) {
-  .account .loyalty-programs form input[type="checkbox"] {
+  .account form input[type="checkbox"] {
     padding: 5px;
   }
   .account .loyalty-programs form label {
@@ -3068,5 +3074,114 @@ footer .copy-rights a:hover {
 
   .account .loyalty-programs .client-wrapper ul li:nth-child(2):after {
     top: 186%;
+  }
+}
+
+/* add-blog */
+.account .add-blog .tox-statusbar,
+.account .add-blog .tox .tox-promotion {
+  display: none;
+}
+
+/* ---------------------------------------------- */
+/* login */
+.login .title-container h2 {
+  font-size: 70px;
+  margin-bottom: 3px;
+}
+.login .title-container p {
+  font-size: 18px;
+  color: var(--gray-1);
+}
+.login .login-form-container {
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  padding: 3% 9%;
+  background-color: #fefefe66;
+  max-width: 50%;
+  margin: auto;
+}
+.login .login-form-container .remember-me {
+  font-size: 14px;
+  margin-top: 3px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.login .login-form-container .forgot-password {
+  font-size: 14px;
+}
+.login .login-form-container .forgot-password:hover {
+  color: var(--gray-1);
+}
+
+.login .login-form-container .sign-up {
+  color: var(--gray-1);
+}
+
+.sign-up .login-form-container {
+  max-width: 80%;
+}
+
+.login .sucess-reset-pass img {
+  height: 120px;
+  margin-bottom: 25px;
+}
+.login .sucess-reset-pass h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+.login .sucess-reset-pass p {
+  color: var(--gray-1);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 20%;
+}
+@media (max-width: 1400px) {
+  .login .title-container h2 {
+    font-size: 54px;
+  }
+}
+@media (max-width: 1200px) {
+  .login .login-form-container {
+    max-width: 65%;
+  }
+  .sign-up .login-form-container {
+    max-width: 90%;
+    padding: 3% 7%;
+  }
+  .login .sucess-reset-pass img {
+    height: 90px;
+    margin-bottom: 20px;
+  }
+  .login .sucess-reset-pass h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .login .sucess-reset-pass p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .login .title-container h2 {
+    font-size: 34px;
+  }
+  .login .title-container p {
+    font-size: 14px;
+  }
+
+  .login .login-form-container {
+    max-width: 80%;
+    padding: 3% 7%;
+  }
+  .login .sucess-reset-pass img {
+    height: 80px;
+  }
+  .login .sucess-reset-pass h3 {
+    font-size: 20px;
+  }
+  .login .sucess-reset-pass p {
+    font-size: 14px;
+    padding: 0 6%;
   }
 }
