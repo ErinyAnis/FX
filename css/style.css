@@ -829,7 +829,7 @@ header .top-header .search-container {
 }
 
 .home .hero-sec-slider .slick-dots li button:before {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 @media (max-width: 1400px) {
@@ -1188,11 +1188,11 @@ header .top-header .search-container {
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .home .download-app .download-app-container {
     text-align: left;
-}
-.home .download-app .buttons-holder {
+  }
+  .home .download-app .buttons-holder {
     justify-content: start;
   }
 }
@@ -1433,15 +1433,15 @@ header .top-header .search-container {
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
- .home .nav-pills::-webkit-scrollbar {
-  display: none;
-}
+  .home .nav-pills::-webkit-scrollbar {
+    display: none;
+  }
 
-/* Hide scrollbar for IE, Edge and Firefox */
- .home .nav-pills {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .home .nav-pills {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 
   .home .nav-pills .nav-link {
     margin: 5px;
@@ -1579,7 +1579,6 @@ header .top-header .search-container {
     padding: 0.5rem 0.8rem;
   }
 }
-
 
 /* end withdrawal-sec */
 /* ---------------------------------------------- */
@@ -1824,7 +1823,7 @@ header .top-header .search-container {
   background-color: var(--gray-5);
   border: 1px solid var(--gray-4);
   font-size: 14px;
-  padding: 7px 10px;
+  padding: 9px 10px;
 }
 
 .contact-us-sec .form-container input:focus {
@@ -1958,9 +1957,9 @@ footer i:hover {
 footer .line {
   height: 1px;
   width: 80%;
-  background-color: var(--gray-700);
+  background-color: #bcbacd3d;
   margin: auto;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 footer .copy-rights a {
@@ -1970,6 +1969,10 @@ footer .copy-rights a {
 
 footer .copy-rights a:hover {
   color: var(--white);
+}
+
+footer .bottom-text {
+  margin-top: 10px;
 }
 
 @media (max-width: 992px) {
@@ -2444,6 +2447,18 @@ footer .copy-rights a:hover {
   text-align: center;
   width: 70%;
   height: 550px;
+}
+
+.broker-details .brokers .brokers-card-container .offers h3 {
+  font-size: 26px;
+}
+
+.broker-details .brokers .brokers-card-container .offers p {
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 @media (max-width: 1400px) {
   .broker-details iframe {
