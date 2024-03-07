@@ -320,18 +320,34 @@ header .top-header .lang-button-container img {
   height: 20px;
 }
 
-header .top-header .top-header-btn img {
-  height: 18px;
+header .top-header .top-header-btn,
+header .top-header .profile-btn {
+  font-size: 18px;
+  transition: var(--transition);
+  border: 1px solid var(--white);
+  padding: 4px 20px;
+  border-radius: 5px;
+}
+
+header .top-header .profile-btn-container {
+  margin-right: 30px;
+}
+
+header .top-header .profile-btn {
+  color: var(--white);
+}
+header .top-header .profile-btn:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 header .top-header .top-header-btn {
-  border: 1px solid var(--white);
   color: var(--main-color);
-  font-size: 18px;
-  transition: var(--transition);
-  padding: 4px 20px;
-  border-radius: 5px;
   background-color: var(--white);
+}
+
+header .top-header .top-header-btn img {
+  height: 18px;
 }
 
 header .top-header .top-header-btn:hover {
